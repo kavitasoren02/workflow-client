@@ -27,7 +27,7 @@ export default function ConfigurationPanel({
 
   const fetchDocuments = async () => {
     try {
-      const response = await fetch("http://localhost:8000/api/documents");
+      const response = await fetch("https://workflow-server-u99y.onrender.com/api/documents");
       if (response.ok) {
         const docs = await response.json();
         setDocuments(docs);
@@ -54,7 +54,7 @@ export default function ConfigurationPanel({
 
     try {
       const response = await fetch(
-        "http://localhost:8000/api/documents/upload",
+        "https://workflow-server-u99y.onrender.com/api/documents/upload",
         {
           method: "POST",
           body: formData,

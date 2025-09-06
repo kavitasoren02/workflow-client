@@ -45,7 +45,7 @@ export default function ChatModal({ workflow, onClose }: ChatModalProps) {
     setIsLoading(true);
 
     try {
-      const response = await fetch("http://localhost:8000/api/query", {
+      const response = await fetch("https://workflow-server-u99y.onrender.com/api/query", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
