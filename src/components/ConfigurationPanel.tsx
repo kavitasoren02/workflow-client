@@ -63,6 +63,8 @@ export default function ConfigurationPanel({
 
       if (response.ok) {
         const result = await response.json();
+        console.log(result);
+        
         alert(`Document "${file.name}" uploaded successfully!`);
         fetchDocuments();
       } else {

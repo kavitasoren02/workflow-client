@@ -105,9 +105,10 @@ export default function WorkflowBuilder({
     return configs[type] || {};
   };
 
-  const onNodeClick = useCallback((event: React.MouseEvent, node: Node) => {
+  const onNodeClick = useCallback((_event: React.MouseEvent, node: Node) => {
     setSelectedNode(node);
   }, []);
+  
 
   const updateNodeConfig = (nodeId: string, config: any) => {
     setNodes((nds: any) =>
